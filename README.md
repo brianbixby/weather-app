@@ -1,6 +1,6 @@
 # Project : Weather-App
 
-Simple single page weather app
+Simple single page weather app.
 
 ## Tech/Framework/Packages
 
