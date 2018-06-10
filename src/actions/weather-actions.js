@@ -6,7 +6,7 @@ export const weatherFetch = city => ({
 });
 
 export const weatherFetchRequest = city => dispatch => {
-  let url = `http://api.openweathermap.org/data/2.5/forecast?q=${city},us&appid=${process.env.API_KEY}`;
+  let url = `https://api.openweathermap.org/data/2.5/forecast?q=${city},us&appid=${process.env.API_KEY}`;
   return superagent.get(url)
     .then(res => {
       let response = [];
