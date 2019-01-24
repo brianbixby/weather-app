@@ -1,6 +1,10 @@
 # Project : Weather-App
 
-Simple single page weather app.
+Simple single page weather app. This was a UI challenge, I was given a photo and told to duplicate it as closely as possible. From a functionality stand point I leveraged cookies to improve latency and limit unnecessary requests. I also utilized navigator's geolocation to find the user's current location, if the user's browser does not have this functionality or the user declines to share their location, then I look up their IP address and use the address asscoiated with their IP.
+
+## Goal
+
+![Demo](./src/assets/siteImage.png)
 
 ## Tech/Framework/Packages
 
