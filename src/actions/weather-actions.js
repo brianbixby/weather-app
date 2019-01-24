@@ -18,6 +18,8 @@ export const weatherFetchRequest = city => dispatch => {
         }
       }
       localStorage.weatherAppToken = JSON.stringify(response);
+      localStorage.weatherAppCity = city;
+      localStorage.timestamp = new Date().getTime() + 480000;
       dispatch(weatherFetch(response));
       return response;
     })
