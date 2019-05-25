@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "description": "A simple WeatherApp.",
   "engines": {
+    "node": "12.3.1",
+    "yarn": "1.16.0",
     "npm": "6.9.0"
   },
   "main": "src/index.html",
