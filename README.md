@@ -4,7 +4,11 @@ Simple single page weather app. This was a UI challenge, I was given a photo and
 
 ## Goal
 
-![Demo](./src/assets/siteImage.png)
+![Goal](./src/assets/Mockup.png)
+
+## Result
+
+![Result](./src/assets/siteImage.png)
 
 ## Tech/Framework/Packages
 
