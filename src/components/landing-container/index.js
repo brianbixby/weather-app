@@ -32,7 +32,7 @@ class LandingContainer extends React.Component {
   }
 
   ipLookUp = () => {
-    fetch('https://ip-api.com/json')
+    fetch('https://ipapi.co/json')
       .then(res => res.json())
       .then(
         (result) => {
