@@ -13,9 +13,9 @@ Simple single page weather app. This was a UI challenge, I was given a photo and
 ## Tech/Framework/Packages
 
 - Node 
-- heroku
-- github
-- npm/yarn
+- Heroku
+- Github
+- NPM/Yarn
 - Frontend Node packages:
   - Autoprefixer          
   - Babel-core         
@@ -39,6 +39,7 @@ Simple single page weather app. This was a UI challenge, I was given a photo and
   - Superagent                                 
 - devDependencies:
   - Babel-jest
+  - Babel-plugin-static-fs
   - Babel-plugin-stylus-compiler
   - Babel-plugin-transform-async-to-generator
   - Babel-plugin-transform-css-import-to-string
@@ -48,9 +49,13 @@ Simple single page weather app. This was a UI challenge, I was given a photo and
   - Babel-plugin-transform-object-assign
   - Babel-plugin-transform-version-inline
   - Babel-preset-es2015
-  - Babel-preset-stage-0             
-  - Eslint          
-  - Eslint-plugin-react          
+  - Babel-preset-stage-0
+  - Enzyme
+  - Enzyme-adapter-react-16             
+  - Eslint       
+  - Jest
+  - Redux-devtools-extension
+  - Redux-logger         
 
 
 ## How to use?
