@@ -13,52 +13,64 @@ class LandingContainer extends React.Component {
   }
 
   componentWillMount() {
-    console.log('If you have any questions about my code please email me @BrianBixby0@gmail.com and visit www.BuiltByBixby.com to see my latest projects.');
+    console.log('If you have any questions about my code please email me @BrianBixby0@gmail.com and visit https://www.builtbybixby.us to see my latest projects.');
     if (localStorage.timestamp && localStorage.timestamp > new Date().getTime()) {
+      console.log("here 0");
       this.props.weatherFetchRequest(JSON.parse(localStorage.weatherAppToken));
     }
     if ("geolocation" in navigator) {
+      console.log("here 1");
       navigator.geolocation.getCurrentPosition(
         position => {
           this.getAddress(position.coords.latitude, position.coords.longitude);
         },
         err => {
+          console.log("here 2");
           this.ipLookUp();
         }
       );
     } else {
+      console.log("here 3");
       this.ipLookUp();
     }
   }
 
   ipLookUp = () => {
+    console.log("here 4");
     fetch('https://ipapi.co/json')
       .then(res => res.json())
       .then(
         (result) => {
+            console.log("here 5");
             let searchString = `${result.city}, ${result.region}, ${result.country}`;
             if (!localStorage.timestamp || localStorage.timestamp > new Date().getTime() || searchString.indexOf(localStorage.weatherAppCity) < 0)
               this.handleSearch(searchString);
           },
           (error) => {
+              console.log("here 6");
               console.log('Request failed.  Returned status of', error);
           }
       );
   };
 
   getAddress = (lat, lon) => {
+    console.log("here 7");
     fetch(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${lon}&key=${process.env.GOOGLE_MAP_KEY}`)
       .then(res => res.json())
       .then(
         (result) => {
+          console.log("here 8");
           let searchString = result.plus_code.compound_code.substr(result.plus_code.compound_code.indexOf(" ") + 1);
           if (!localStorage.timestamp || localStorage.timestamp > new Date().getTime() || searchString.indexOf(localStorage.weatherAppCity) < 0)
-            this.handleSearch(searchString);
+            return this.handleSearch(searchString);
+          return ;
         },
         (error) => {
-          console.log('Request failed.  Returned status of', error);
+          console.log("here 9");
+          return console.log('Request failed.  Returned status of', error);
         }
-      );
+      )
+      .catch(err => console.error(err));
   };
   
   handleSearch = city => {
