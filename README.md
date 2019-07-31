@@ -4,11 +4,11 @@ Simple single page weather app. This was a UI challenge, I was given a photo and
 
 ## Goal
 
-![Goal](./src/assets/Mockup.webp)
+![Goal](./src/assets/Mockup.png)
 
 ## Result
 
-![Result](./src/assets/siteImage.webp)
+![Result](./src/assets/siteImage.png)
 
 ## Tech/Framework/Packages
 

@@ -69,8 +69,8 @@ class LandingContainer extends React.Component {
 
   render() {
     let {weather} = this.props;
-    let cloud1 = require('../../assets/cloud1.webp');
-    let cloud2 = require('../../assets/cloud2.webp');
+    let cloud1 = require('../../assets/cloud1.png');
+    let cloud2 = require('../../assets/cloud2.png');
     let cloud1Style = {
       background: `url(${cloud1}) no-repeat`,
     }; 
